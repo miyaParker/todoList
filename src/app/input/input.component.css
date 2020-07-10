@@ -1,16 +1,26 @@
-
 button{
     background-color: rgb(5, 133, 139);
     color: white;
     height: 3rem;
 }
 input{
-    height: 3rem;
-    margin-right: 1rem;
+    text-align: center;
+        height: 3rem;
+}
+div{
+    padding: 0 1rem;
 }
 .form-row{
     margin: 1rem 0;
 }
 input:focus, button:focus{
+   
     outline: none !important;
+}
+button:hover{
+    color: rgb(5, 133, 139);
+    background-color: rgb(39, 36, 36);
+}
+@media only screen and (min-width: 768px) {
+
 }
