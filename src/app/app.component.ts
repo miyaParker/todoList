@@ -15,7 +15,7 @@ export class AppComponent {
 
   addTodo(text: string) {
     const todo = { text, status: "pending", id: Date.now() }
-    this.todoList.push(todo)
+    this.todoList.unshift(todo)
     localStorage.setItem('task-list',JSON.stringify(this.todoList))
   }
   deleteTodo(id:string) {
