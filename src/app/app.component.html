@@ -3,7 +3,7 @@
   <app-input (submit)="addTodo($event)"></app-input>
   <div class="task-list">
     <ul>
-      <div class="col-9 row list-item" *ngFor="let todo of todoList" (click)="checkTodo(todoItem.id)">
+      <div class="col-10 row list-item" *ngFor="let todo of todoList" (click)="checkTodo(todoItem.id)">
         <svg  xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
           viewBox="0 0 172 172" style=" fill:#000000;">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
@@ -27,7 +27,7 @@
     <ul>
       <span class="center-text" *ngIf="!completedTodos || !completedTodos.length">{{uncompletedTodos}}</span>
       <h2 class="  center-text" *ngIf="completedTodos && completedTodos.length">Completed Tasks</h2>
-      <div  class="row list-item col-8" *ngFor="let todo of completedTodos">
+      <div  class="row list-item col-10" *ngFor="let todo of completedTodos">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 172 172"
           style=" fill:#000000;">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
