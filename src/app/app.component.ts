@@ -18,7 +18,13 @@ export class AppComponent {
     this.todoList.push(todo)
     localStorage.setItem('task-list',JSON.stringify(this.todoList))
   }
-  checkTodo(id) {
+  deleteTodo(id:string) {
+    const todoItem = this.completedTodos.filter(todo => todo.id === +id)
+    const todoIndex = this.todoList.indexOf(todoItem[0])
+    this.completedTodos.splice(todoIndex,1)
+    localStorage.setItem('completed-tasks',JSON.stringify(this.completedTodos))
+  }
+  checkTodo(id:string) {
     if(this.completedTodos.length>=10){
       this.completedTodos.shift()
     }

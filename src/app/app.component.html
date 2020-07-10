@@ -27,7 +27,7 @@
     <ul>
       <span class="center-text" *ngIf="!completedTodos || !completedTodos.length">{{uncompletedTodos}}</span>
       <h2 class="  center-text" *ngIf="completedTodos && completedTodos.length">Completed Tasks</h2>
-      <div class="row list-item col-10" *ngFor="let todo of completedTodos">
+      <div class="row list-item col-10" *ngFor="let todo of completedTodos" (click)="deleteTodo(task.id)">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26" viewBox="0 0 172 172"
           style=" fill:#000000;">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
@@ -41,7 +41,7 @@
             </g>
           </g>
         </svg>
-        <li class={{todo.status}} id="{{todo.id}}" [ngClass]="'my-auto'">
+        <li #task class={{todo.status}} id="{{todo.id}}" [ngClass]="'my-auto'">
           {{todo.text}}</li>
       </div>
 
