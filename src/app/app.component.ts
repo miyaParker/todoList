@@ -19,16 +19,21 @@ export class AppComponent {
     localStorage.setItem('task-list',JSON.stringify(this.todoList))
   }
   checkTodo(id) {
+    if(this.completedTodos.length>=10){
+      this.completedTodos.shift()
+    }
     const todoItem = this.todoList.filter(todo => todo.id === +id)
     todoItem[0].status="completed"
     const todoIndex = this.todoList.indexOf(todoItem[0])
     this.todoList.splice(todoIndex,1)
     localStorage.setItem('task-list',JSON.stringify(this.todoList))
     this.completedTodos.push(todoItem[0])
+    localStorage.setItem('completed-tasks',JSON.stringify(this.completedTodos))
   }
 ngOnInit(){
   if(!!localStorage && localStorage.getItem('task-list')){
     this.todoList= JSON.parse(localStorage.getItem('task-list'))
+    this.completedTodos= JSON.parse(localStorage.getItem('completed-tasks'))
   }
 }
 }
