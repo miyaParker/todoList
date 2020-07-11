@@ -1,3 +1,6 @@
-<div class="row justify-content-center" >
-    <input #input autofocus type="text" class="form-control col-9" min="5" max="50" placeholder="What do you want to do today?" (keyup.enter)='getInput(input)'>
-</div>
+<div class="container input-group mb-2 justify-content-center">
+    <input #input autofocus type="text" class="form-control col-10" placeholder="What do you want to do today?" (keyup.enter)='getInput(input)'>
+    <div class="input-group-append">
+      <button class="btn input-group-text" id="add-task" (click)='getInput(input)'>Add Task</button>
+    </div>
+  </div>
