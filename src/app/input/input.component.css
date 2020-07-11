@@ -5,22 +5,11 @@ button{
 }
 input{
     text-align: center;
-        height: 3rem;
-}
-div{
-    padding: 0 1rem;
-}
-.form-row{
-    margin: 1rem 0;
-}
-input:focus, button:focus{
-   
+    height: 3rem;
+}input:focus, button:focus{
     outline: none !important;
 }
 button:hover{
     color: rgb(5, 133, 139);
-    background-color: rgb(39, 36, 36);
-}
-@media only screen and (min-width: 768px) {
-
+    background-color: azure;
 }
